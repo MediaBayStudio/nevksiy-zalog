@@ -1,0 +1,34 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.rejection {
+  margin-bottom: 40px;
+
+  &__list {
+    color: $color;
+    font: 500 14px/130% $mainFont;
+  }
+
+  &__item {
+    padding: 18px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #F9E4E5;
+    margin-bottom: 30px;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      margin-right: 20px;
+      min-width: 24px;
+      min-height: 24px;
+      background: url('../img/icons/cross.svg') no-repeat right/contain;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

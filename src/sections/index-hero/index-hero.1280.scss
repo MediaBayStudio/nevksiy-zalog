@@ -1,0 +1,18 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.hero {
+  &__top {
+    &::after {
+      left: calc((50vw - 630px) * -1);
+    }
+  }
+}
+
+.adv-subsect {
+  &__cards {
+    max-width: 1090px;
+    margin: -75px auto 0;
+  }
+}

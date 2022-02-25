@@ -1,0 +1,45 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.contacts {
+  &__cnt {
+    display: flex;
+    padding-right: calc(50vw - 480px);
+  }
+
+  &__map {
+    margin: 0 80px 0 0;
+    max-width: 585px;
+  }
+
+  &__item {
+    transition: color .25s;
+
+    &-link {
+      transition: color .25s;
+
+      &:hover {
+        color: $gold;
+      }
+    }
+  }
+
+  &__socials {
+    &-link {
+      transition: color .25s;
+
+      &:hover {
+        color: $gold;
+
+        .s-icon_tg-black {
+          background-image: url('../img/icons/tg-gold.svg');
+        }
+
+        .s-icon_wsap-black {
+          background-image: url('../img/icons/wsap-gold.svg');
+        }
+      }
+    }
+  }
+}

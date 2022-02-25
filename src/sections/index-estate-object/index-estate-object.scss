@@ -1,0 +1,46 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.estate-object {
+  margin: 40px 0 0;
+  
+  .objects {
+    &__img-wrapper {
+      padding-bottom: 58%;
+      position: relative;
+    }
+
+    &__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background: #FAF8F3 url('../img/Logo.svg') no-repeat center/10%;
+    }
+
+    &__toggle-btns {
+      display: flex;
+      flex-flow: column;
+      font: 400 16px/1 $mainFont;
+    }
+
+    &__toggle-btn {
+      margin-top: 20px;
+      min-width: 280px;
+      height: 50px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #E5D2A5;
+      background-color: #FAF8F3;
+
+      &.active {
+        background-color: #E5D2A5;
+      }
+    }
+  }
+}

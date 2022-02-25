@@ -1,0 +1,23 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.ftr {
+  &__top {
+    align-items: flex-end;
+  }
+
+  &__callback {
+    display: block;
+    margin-left: 20px;
+  }
+
+  &__logo {
+    margin: 0 40px -2px 0;
+  }
+
+  .nav {
+    display: block;
+    margin: 0 auto 0 0;
+  }
+}

@@ -1,0 +1,13 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.ftr {
+  &__logo {
+    margin-right: 90px;
+  }
+
+  &__callback {
+    margin-left: 40px;
+  }
+}

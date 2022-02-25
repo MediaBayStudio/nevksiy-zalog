@@ -1,0 +1,44 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.calculator {
+  &__results {
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+.calc-res {
+  display: flex;
+  max-width: 460px;
+  width: 100%;
+  margin: 0 auto;
+
+  &__item {
+    &:first-child {
+      margin: 0 auto 0 0;
+    }
+
+    &:last-child {
+      margin: 0;
+      min-width: 175px;
+    }
+  }
+
+  &__info {
+    margin: 40px auto 0;
+    flex-flow: row;
+    max-width: 460px;
+    width: 100%;
+
+    &-text {
+      margin: 0 auto 0 0;
+    }
+  }
+
+  &__link {
+    width: 175px;
+    padding: 15px 24px;
+  }
+}

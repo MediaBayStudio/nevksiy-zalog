@@ -1,0 +1,118 @@
+
+@import '../assets/colors';
+@import '../assets/mixins';
+@import '../assets/variables';
+
+
+.slick {
+  &-slider {
+    user-select: none;
+    touch-action: pan-y;
+  }
+  &-list {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    &.draggable {
+      cursor: grab;
+    }
+    &.grabbing {
+      cursor: grabbing;
+    }
+  }
+  &-track {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    &::after,
+    &::before {
+      display: table;
+      content: '';
+    }
+    &::after {
+      clear: both;
+    }
+  }
+  &-dotted {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 30px;
+    > .dots {
+      order: 10;
+    }
+  }
+  &-dots {
+    position: absolute;
+    width: 100vw;
+    left: -20px;
+    bottom: 0;
+    display: flex;
+    height: 2px;
+    background-color: $gold;
+
+    > li {
+      flex-grow: 1;
+      opacity: 0;
+      height: 100%;
+      transition: opacity .25s;
+
+      &.slick-active {
+        opacity: 1;
+        background: $red;
+      }
+    }
+  }
+}
+
+.slick-track,
+.slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+@media screen and (min-width: 575.98px) {
+  .slick {
+    &-list {
+      overflow: visible;
+    }
+
+    &-dots {
+      left: calc((50vw - 268px) * -1);
+    }
+  }
+}
+
+@media screen and (min-width: 767.98px) {
+  .slick {
+    &-dots {
+      left: calc((50vw - 324px) * -1);
+    }
+  }
+}
+
+@media screen and (min-width: 1023.98px) {
+  .slick {
+    &-dots {
+      left: calc((50vw - 480px) * -1);
+    }
+  }
+}
+
+@media screen and (min-width: 1279.98px) {
+  .slick {
+    &-dotted {
+      padding-bottom: 60px;
+    }
+
+    &-dots {
+      left: calc((50vw - 630px) * -1);
+    }
+  }
+}

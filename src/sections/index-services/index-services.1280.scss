@@ -1,0 +1,28 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.service {
+  max-width: 860px;
+  width: 100%;
+  padding: 60px 35px;
+  margin-right: 60px;
+
+  &__pic {
+    min-width: 320px;
+    margin-right: 60px;
+  }
+
+  &__text {
+    max-width: 550px;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  &__descr {
+    font-size: 18px;
+  }
+}

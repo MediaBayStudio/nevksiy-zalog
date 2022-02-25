@@ -1,0 +1,38 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__nav {
+    font: 500 16px/155% $mainFont;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__prim-link {
+    margin-top: auto;
+  }
+}

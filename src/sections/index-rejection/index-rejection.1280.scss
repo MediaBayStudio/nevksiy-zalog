@@ -1,0 +1,28 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.rejection {
+  margin-bottom: 60px;
+
+  &__list {
+    max-width: 1260px;
+    width: 100%;
+  }
+
+  &__item {
+    margin: 60px 0 0;
+
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
+
+    &:nth-child(3n+2) {
+      margin: 60px auto 0;
+    }
+
+    &:nth-child(-n+3) {
+      margin-top: 0;
+    }
+  }
+}

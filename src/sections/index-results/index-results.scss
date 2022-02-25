@@ -1,0 +1,45 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.results {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  margin: 40px 0;
+  background-color: #FAF8F3;
+
+  &__title {
+    text-transform: initial;
+    font-family: $mainFont;
+    margin-bottom: 45px;
+    font-size: 20px;
+    font-feature-settings: 'pnum', 'lnum';
+  }
+
+  &__item {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-title {
+      font: 500 20px/1 $mainFont;
+      color: $gold;
+      margin-bottom: 15px;
+      font-feature-settings: 'pnum', 'lnum';
+    }
+
+    &-descr {
+      font: 400 14px/1;
+      color: $color;
+      font-feature-settings: 'pnum', 'lnum';
+    }
+  }
+
+  &__descr {
+    font: 500 20px/140% $mainFont;
+    margin: 45px 0;
+    font-feature-settings: 'pnum', 'lnum';
+  }
+}

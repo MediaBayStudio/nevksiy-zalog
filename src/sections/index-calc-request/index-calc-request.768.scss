@@ -1,0 +1,69 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.calc-request {
+  padding-top: 0;
+  margin: 45px 0;
+
+  &__pic {
+    width: 60%;
+    padding-bottom: 60%;
+    margin-top: -5%;
+  }
+
+  &__form {
+    padding: 35px 65px;
+  }
+
+  &__img {
+    top: 15%;
+  }
+
+  .form__bottom {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    align-items: flex-start;
+
+    .btn {
+      margin: 0 0 0 auto;
+      padding: 12px 24px;
+    }
+  }
+
+  #calc-form {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .field {
+    &_tel,
+    &_email {
+      width: calc(50% - 10px);
+    }
+
+    &_tel {
+      margin-right: 20px;
+    }
+  }
+}
+
+.calc-fields {
+  margin-bottom: 15px;
+}
+
+.calc-field {
+  margin-right: 15px;
+
+  &--amount,
+  &--term,
+  &--total {
+    width: calc((100% - 30px) / 3);
+  }
+
+  &--total {
+    margin: 0;
+    margin-right: 0;
+  }
+}

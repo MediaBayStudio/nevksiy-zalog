@@ -1,0 +1,25 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.escort {
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__list {
+    max-width: 1260px;
+  }
+
+  &__item {
+    margin: 60px 0 0;
+
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
+
+    &:nth-child(3n+2) {
+      margin: 60px auto 0;
+    }
+  }
+}

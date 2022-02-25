@@ -1,0 +1,134 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.hero {
+  padding-top: 20px;
+  padding-bottom: 120px;
+  background: url('../img/header-bg.jpg') no-repeat center/cover;
+  color: $white;
+  background-color: $black;
+
+  &__top {
+    display: flex;
+    align-items: center;
+
+    .nav {
+      display: none;
+    }
+  }
+
+  &__mid {
+    position: relative;
+  }
+
+  &__title {
+    font: 400 18px/140% $secondFont;
+    text-transform: uppercase;
+    margin: 45px 0 30px;
+    transition: opacity .25s;
+  }
+
+  &__s-link {
+    display: none;
+  }
+
+  &__burger {
+    width: 30px;
+    height: 20px;
+    background: url('../img/icons/burger-white.svg') no-repeat center/contain;
+    margin-left: auto;
+    transition: background .25s;
+
+    &.open {
+      height: 30px;
+      background-image: url('../img/icons/close-white.svg');
+    }
+  }
+
+  &__descr {
+    &-list {
+      max-width: 230px;
+      transition: opacity .25s;
+      font: 400 14px/140% $mainFont;
+    }
+
+    &-item {
+      padding-left: 30px;
+      margin-bottom: 15px;
+      position: relative;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        content: '';
+        width: 15px;
+        height: 18px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url('../img/icons/gold-shield.svg') no-repeat center/contain;
+      }
+    }
+  }
+
+  &__link {
+    margin-top: 45px;
+    transition: opacity .25s;
+  }
+
+  .hide {
+    opacity: 0;
+  }
+}
+
+.adv-subsect {
+  &__cards {
+    display: flex;
+    flex-flow: wrap;
+    font: 400 14px/130% $mainFont;
+    color: $black;
+    margin-top: -30%;
+  }
+
+  &__card {
+    width: calc(50% - 10px);
+    min-height: 150px;
+    padding: 15px 10px;
+    background: $white;
+    display: flex;
+    flex-flow: column;
+    box-shadow: 0 20px 80px 0 rgba(0, 0, 0, .1);
+    margin-top: 20px;
+
+    &:nth-child(odd) {
+      margin-right: 20px;
+    }
+
+    &-title {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 5px;
+      font-feature-settings: 'pnum', 'lnum';
+    }
+
+    &-descr {
+      display: flex;
+      flex-flow: column;
+      flex-grow: 1;
+      color: $color;
+    }
+
+    &-text {
+      margin-bottom: 10px;
+    }
+
+    &-icon {
+      width: 30px;
+      height: 30px;
+      margin: auto auto 0;
+    }
+  }
+}

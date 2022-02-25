@@ -1,0 +1,48 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.services {
+  padding-top: 80px;
+
+  &__list {
+    display: flex;
+  }
+}
+
+.service {
+  display: flex;
+  flex-flow: column;
+
+  &__pic {
+    position: relative;
+    padding-bottom: 45%;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__text {
+    padding: 15px 10px 30px;
+    background:#FAF8F3;
+    flex-grow: 1;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font: 500 16px/130% $mainFont;
+  }
+
+  &__descr {
+    color: $color;
+    font: 400 14px/130% $mainFont;
+    font-feature-settings: 'pnum', 'lnum';
+  }
+}

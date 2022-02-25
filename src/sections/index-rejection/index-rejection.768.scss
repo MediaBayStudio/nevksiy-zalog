@@ -1,0 +1,26 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.rejection {
+  margin-bottom: 45px;
+  display: flex;
+  flex-flow: column;
+
+  &__list {
+    display: flex;
+    flex-flow: wrap;
+    font-size: 16px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    width: calc(50% - 10px);
+    padding: 20px;
+    margin: 40px 0 0;
+
+    &:nth-child(odd) {
+      margin-right: 20px;
+    }
+  }
+}
