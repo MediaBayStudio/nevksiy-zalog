@@ -1,0 +1,25 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.request {
+  padding-top: 90px;
+  padding-bottom: 400px;
+  overflow: hidden;
+
+  &__form {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 35px 65px;
+  }
+
+  .form__bottom {
+    display: flex;
+    align-items: flex-start;
+
+    .btn {
+      margin: 0 0 0 auto;
+      padding: 12px 24px;
+    }
+  }
+}

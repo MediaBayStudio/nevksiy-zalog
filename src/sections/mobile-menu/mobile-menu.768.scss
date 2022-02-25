@@ -1,0 +1,9 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.menu {
+  &__prim-link {
+    display: none;
+  }
+}

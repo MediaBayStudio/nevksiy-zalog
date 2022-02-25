@@ -1,0 +1,46 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.requirements {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 60px 0;
+  padding-bottom: 45px;
+
+  &.lazyloaded {
+    background-image: url('../img/requirements-bg.jpg');
+  }
+
+  &__title {
+    color: $white;
+  }
+
+  &__list {
+    color: $color;
+    font: 500 14px/130% $mainFont;
+  }
+
+  &__item {
+    padding: 18px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    margin-bottom: 30px;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      margin-right: 20px;
+      min-width: 20px;
+      min-height: 24px;
+      background: url('../img/icons/gold-shield.svg') no-repeat right/contain;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.contacts {
+  &__cnt {
+    display: flex;
+    padding-right: calc(50vw - 630px);
+  }
+
+  &__map {
+    max-width: 50%;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-bottom: 0;
+
+    &:first-child {
+      margin-right: 120px;
+    }
+  }
+}

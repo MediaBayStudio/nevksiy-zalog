@@ -1,0 +1,168 @@
+
+@import '../assets/colors';
+@import '../assets/mixins';
+@import '../assets/variables';
+
+form.loading {
+  &::after {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0, .3);
+    pointer-events: none;
+  }
+}
+
+// Сообщение об ошибке заполнения поля
+span.invalid {
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  font: normal 12px/150% sans-serif;
+  color: #B23633;
+
+  ~ .field__text {
+    opacity: 0;
+  }
+}
+
+// Если ошибка, то можно подчеркнуть поле
+.field__inp.invalid,
+.field__textarea.invalid {
+  // border-bottom-color: $error;
+}
+
+// Рассчет размера нужен для ограничения ширины блока
+// чтобы сообщение об ошибке вставало корректно
+$checkbox_size: 15px;
+$checkbox_margin_right: 8px;
+$checkbox_text_width: calc(100% - #{$checkbox_size + $checkbox_margin_right});
+// $checkbox_border_radius: 0;
+
+.check {
+  display: flex;
+  cursor: pointer;
+  color: #3F3F3F;
+
+  &_tick { // Чекбокс с галочкой
+    align-items: flex-start;
+    max-width: 250px;
+    flex-wrap: wrap;
+    // font: 10px/124% Montserrat;
+
+    >.check__text {
+      width: $checkbox_text_width;
+    }
+
+    >.check__inp {
+      margin: 0 $checkbox_margin_right 0 0;
+      width: $checkbox_size;
+      height: $checkbox_size;
+      background: transparent url('./img/icons/check-light.svg') center/cover border-box no-repeat;
+      transition: background .25s;
+      pointer-events: none;
+      border: none;
+
+      &:checked {
+        background-image: url('./img/icons/check.svg');
+      }
+    }
+  }
+
+  &_fill { // Чекбокс с заполнением цветом
+    align-items: center;
+
+    >.check__text {}
+
+    >.check__inp {
+      margin: 0 10px 0 0;
+      width: 10px;
+      height: 10px;
+      // box-shadow: inset 0 0 0 10px $white;
+      // background: $green;
+      border-radius: 2px;
+      transition: box-shadow .5s;
+
+      &:checked {
+        // box-shadow: inset 0 0 0 2px $white;
+      }
+    }
+  }
+
+  >label.invalid {
+    position: static;
+    margin: 4px 0 -4px $checkbox_size + $checkbox_margin_right;
+    max-width: $checkbox_text_width;
+    order: 10;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &__inp {
+    appearance: none;
+    display: inline-flex;
+    border: 1px solid;
+    flex-shrink: 0;
+  }
+
+  &__text,
+  &__link {
+    display: inline-block;
+    font-size: 12px;
+  }
+}
+
+.field {
+  width: 100%;
+  display: inline-flex;
+  flex-flow: column;
+  font: 16px/140% $mainFont;
+  position: relative;
+
+  &__textarea,
+  &__inp {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    padding: 10px;
+    background: #fff;
+    font: inherit;
+    color: $black;
+    border: 1px solid #E4E4E4;
+    font-feature-settings: 'pnum', 'lnum';
+    // transition: border-bottom-color .5s;
+
+    &:focus,
+    &.filled {
+      // &:focus.valid,
+      // &.filled.valid {
+      // border-bottom-color: $black;
+
+      ~.field__text {
+        top: -16px;
+        font-size: 11.5px;
+      }
+    }
+
+    &::placeholder {
+      color: rgba(0, 0, 0, .3);
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #3F3F3F;
+    transition: color .2s;
+  }
+
+  &__select {
+    &:invalid {
+      color: rgba(0, 0, 0, .3);
+    }
+  }
+}

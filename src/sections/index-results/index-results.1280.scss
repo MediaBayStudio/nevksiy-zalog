@@ -1,0 +1,9 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.results {
+  &__cnt {
+    margin: 0 auto 0 225px;
+  }
+}

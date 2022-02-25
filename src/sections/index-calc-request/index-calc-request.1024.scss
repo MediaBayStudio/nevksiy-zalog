@@ -1,0 +1,29 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.calc-request {
+  padding-top: 105px;
+  padding-bottom: 105px;
+  flex-flow: row;
+  position: relative;
+  margin: 50px 0;
+
+  &__pic {
+    max-width: 630px;
+    width: 100%;
+    padding-bottom: 44%;
+    position: absolute;
+    left: -15%;
+    bottom: 0;
+    margin-top: 0;
+  }
+
+  &__img {
+    top: 0;
+  }
+
+  &__form {
+    margin-left: auto;
+  }
+}

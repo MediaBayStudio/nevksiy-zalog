@@ -1,0 +1,54 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.calculator {
+  font-size: 18px;
+
+  &__inner {
+    flex-flow: row;
+  }
+
+  &__inputs {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+
+  &__results {
+    margin: 0 0 0 110px;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .range-inp {
+    &:first-child {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.calc-res {
+  flex-flow: column;
+
+  &__item {
+
+    &:first-child {
+      margin: 0 0 30px 0;
+    }
+
+    &-title {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__info {
+    flex-flow: column-reverse;
+
+    &-text {
+      margin: 15px 0 0 0;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.calculator {
+  font: 400 14px/1 $mainFont;
+
+  &__inner {
+    display: flex;
+    flex-flow: column;
+  }
+
+  &__results {
+    background-color: #FAF8F3;
+    padding: 30px 15px;
+    margin-top: 30px;
+  }
+
+  .range-inp {
+    &:first-child {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.range-inp {
+  display: flex;
+  flex-flow: column;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+
+  &__top {
+    display: flex;
+  }
+
+  &__title {
+    margin-right: auto;
+  }
+
+  &__info {
+    text-align: right;
+    opacity: .5;
+  }
+
+  &__inp {
+    width: 100%;
+    padding: 15px 0;
+    position: relative;
+    cursor: pointer; 
+
+    -webkit-tap-highlight-color:transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &::-webkit-slider-thumb {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #B23633;
+      border: none;
+      box-shadow: 0 0 1px 5px rgba(178, 54, 51, 0.2);
+      margin-top: -4px;
+    }
+
+    &::-moz-range-thumb {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #B23633;
+      border: none;
+      box-shadow: 0 0 1px 5px rgba(178, 54, 51, 0.2);
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+    }
+
+    &::-webkit-slider-runnable-track {
+      height: 2px;
+      border: none;
+      border-radius: 2px;
+      background-color: #FAF8F3;
+      box-shadow: none;
+    }
+
+
+    &::-moz-range-track {
+      height: 2px;
+      border: none;
+      border-radius: 2px;
+      background-color: #FAF8F3;
+      box-shadow: none;
+    }
+  }
+}
+
+.calc-res {
+  &__item {
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-title {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    &-info {
+      color: $gold;
+      text-transform: capitalize;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      font-size: 24px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-flow: column-reverse;
+    margin-top: 45px;
+
+    &-text {
+      max-width: 195px;
+      margin-top: 20px;
+      font-size: 14px;
+      line-height: 135%;
+      opacity: .5;
+    }
+  }
+}

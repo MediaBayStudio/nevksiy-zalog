@@ -1,0 +1,21 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.estate-object {
+  margin: 60px 0 0;
+  
+  .objects {
+    display: flex;
+    align-items: center;
+
+    &__img-wrapper {
+      width: 620px;
+      margin-right: auto;
+    }
+
+    &__toggle-btns {
+      margin-right: 205px;
+    }
+  }
+}

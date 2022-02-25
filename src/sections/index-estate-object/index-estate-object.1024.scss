@@ -1,0 +1,25 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.estate-object {  
+  margin: 50px 0 0;
+  
+  .objects {
+    display: flex;
+    align-items: center;
+
+    &__img-wrapper {
+      width: 552px;
+      margin-right: auto;
+    }
+
+    &__toggle-btn {
+      transition: background .2s;
+
+      &:hover {
+        background-color: #E5D2A5;
+      }
+    }
+  }
+}

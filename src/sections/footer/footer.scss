@@ -1,0 +1,44 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.ftr {
+  display: flex;
+  flex-flow: column;
+  padding-bottom: 30px;
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+
+  .nav,
+  &__callback {
+    display: none;
+  }
+
+  &__top,
+  &__bottom {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  &__top {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #000;
+  }
+
+  &__bottom {
+    padding-top: 30px;
+  }
+
+  &__rights {
+    text-align: center;
+  }
+
+  &__dev {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+  }
+}

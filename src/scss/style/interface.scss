@@ -1,0 +1,317 @@
+
+@import '../assets/colors';
+@import '../assets/mixins';
+@import '../assets/variables';
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $mainFont, sans-serif;
+}
+// Класс добавляется при вызове попапов и мобильного меню
+body.no-scroll {
+  overflow: hidden;
+
+  .hdr.fixed {
+    overflow-y: scroll;
+  }
+}
+
+// Обертка для всего контента
+// фиксит горизонтальную прокрутку на некоторых iOS
+#page-wrapper {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-flow: column;
+  font-feature-settings: 'pnum', 'lnum';
+}
+
+// img.lazy {
+//   background: url('../img/img-placeholder.svg') center/cover no-repeat;
+// }
+
+// a[href="#"] {
+//   opacity: .5;
+//   pointer-events: none;
+// }
+
+/* loader */
+// Лоадер в основном для форм
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s, visibility .5s;
+  // background: $color;
+
+  &__circle {
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    animation: spin .5s linear infinite;
+    // border-top-color: $color;
+    // border-left-color: $color;
+  }
+}
+
+.loader_white {
+
+  // background: $color;
+  >.loader__circle {
+    // border-top-color: $color;
+    // border-left-color: $color;
+  }
+}
+
+.loading>.loader {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* loader */
+
+// Поле contact form 7 honeypot
+.cf7-form-field {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+// Блок с прокруткой, который показывается на всю ширину и высоту страницы страницы
+// нужен для незаметного overflow:hidden у body
+// при вызове мобильного меню или попапов
+#fake-scrollbar {
+  display: none;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  z-index: 9999;
+
+  &.active {
+    display: block;
+  }
+}
+
+// Блокирование текущей ссылки в меню
+// .nav__list-item {
+//   &.current {
+//     cursor: not-allowed;
+//     > .nav__link {
+//       pointer-events: none;
+//       > .nav__link-text {
+//         border-bottom: 1px solid;
+//       }
+//     }
+//   }
+// }
+
+// Общие стили для секций
+.sect {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &-title {
+    margin-bottom: 40px;
+    font: 400 24px/140% $secondFont;
+    text-transform: uppercase;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+
+  &__img {
+    display: block;
+    width: 30px;
+    height: 37px;
+    object-fit: contain;
+    margin-right: 10px;
+  }
+
+  &__text {
+    display: flex;
+    flex-flow: column;
+  }
+
+  &__title {
+    font: 700 12px/140% $secondFont;
+    margin-bottom: 3px;
+  }
+
+  &__subtitle {
+    font: 500 9px/140% $mainFont;
+  }
+}
+
+.s-icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  transition: background .25s;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  &:hover {
+    &.s-icon_tg-white,
+    &.s-icon_tg-black {
+      background-image: url('./img/icons/tg-gold.svg');
+    }
+
+    &.s-icon_wsap-white,
+    &.s-icon_wsap-black {
+      background-image: url('./img/icons/wsap-gold.svg');
+    }
+
+    &.s-icon_tel-black {
+      background-image: url('./img/icons/tel-gold.svg');
+    }
+  }
+
+  &_tg-white {
+    background-image: url('./img/icons/tg-white.svg');
+  }
+
+  &_tg-black {
+    background-image: url('./img/icons/tg-black.svg');
+  }
+
+  &_wsap-white {
+    background-image: url('./img/icons/wsap-white.svg');
+  }
+
+  &_wsap-black {
+    background-image: url('./img/icons/wsap-black.svg');
+  }
+
+  &_tel-black {
+    background-image: url('./img/icons/tel-black.svg');
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    font: 500 14px/180% $mainFont;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    margin-right: 45px;
+    transition: color .25s;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      color: $gold;
+    }
+  }
+}
+
+.tel-link {
+  display: flex;
+  align-items: center;
+  transition: color .25s;
+
+  &:hover {
+    color: $gold;
+
+    .s-icon {
+      background-image: url('./img/icons/tel-gold.svg');
+    }
+  }
+
+  .s-icon {
+    margin-right: 10px;
+  }
+}
+
+.escort__item,
+.rejection__item,
+.requirements__item {
+  min-height: 60px;
+}
+// Скрытие стандартных сообщений от contact form 7
+div.wpcf7-response-output,
+span.wpcf7-not-valid-tip,
+.screen-reader-response {
+  display: none !important;
+}
+
+@media screen and (min-width: 767.98px) {
+  .escort__item,
+  .rejection__item,
+  .requirements__item {
+    min-height: 90px;
+  }
+
+  .sect {
+    padding-top: 45px;
+    padding-bottom: 45px;
+
+    &-title {
+      font-size: 30px;
+    }
+  }
+
+  .logo {
+    &__img {
+      width: 45px;
+      height: 58px;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (min-width: 1023.98px) {
+  .sect {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &-title {
+      margin-bottom: 60px;
+      font-size: 36px;
+    }
+  }
+}
+
+@media screen and (min-width: 1279.98px) {
+  .sect {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &-title {
+      margin-bottom: 80px;
+      max-width: 60%;
+    }
+  }
+}

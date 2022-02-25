@@ -1,0 +1,22 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.hdr {
+  &__logo {
+    display: flex;
+    margin-right: auto;
+  }
+
+  &__tel {
+    margin-right: 45px;
+  }
+
+  &__socials {
+    display: none;
+  }
+
+  &__callback {
+    margin-left: 0;
+  }
+}

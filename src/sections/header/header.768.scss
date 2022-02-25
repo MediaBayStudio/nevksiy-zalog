@@ -1,0 +1,16 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.hdr {
+
+  &__tel {
+    margin-right: 30px;
+  }
+
+  &__callback {
+    display: block;
+    max-width: 205px;
+    margin-left: auto;
+  }
+}

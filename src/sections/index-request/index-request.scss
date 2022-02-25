@@ -1,0 +1,40 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+
+.request {
+  padding-top: 85px;
+  padding-bottom: 125px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+
+  &.lazyloaded {
+    background-image: url('../img/request-bg.jpg');
+  }
+
+  &__form {
+    background-color: #FAF8F3;
+    padding: 30px 15px;
+
+    &-title {
+      text-align: center;
+      font: 400 16px/1 $mainFont;
+      margin-bottom: 30px;
+    }
+
+    .field {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .btn {
+      margin-top: 15px;
+    }
+  }
+}

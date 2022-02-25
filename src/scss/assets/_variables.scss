@@ -1,0 +1,31 @@
+$mediaQuery576: '(min-width:575.98px)';
+$mediaQuery768: '(min-width:767.98px)';
+$mediaQuery1024: '(min-width:1023.98px)';
+$mediaQuery1280: '(min-width:1279.98px)';
+
+$containerWidth320: 280px;
+$containerWidth576: 536px;
+$containerWidth768: 648px;
+$containerWidth1024: 960px;
+$containerWidth1280: 1260px;
+
+$sectionVerticalPadding320:40px;
+$sectionVerticalPadding576:0px;
+$sectionVerticalPadding768:45px;
+$sectionVerticalPadding1024:50px;
+$sectionVerticalPadding1280:60px;
+
+$sectionHorizontalPadding: 20px;
+$sectionHorizontalPadding: calc(50vw - 268px);
+$sectionHorizontalPadding: calc(50vw - 324px);
+$sectionHorizontalPadding: calc(50vw - 480px);
+$sectionHorizontalPadding: calc(50vw - 630px);
+
+$sectionHorizontalPaddingMinus: -20px;
+$sectionHorizontalPaddingMinus: calc((50vw - 268px) * -1);
+$sectionHorizontalPaddingMinus: calc((50vw - 324px) * -1);
+$sectionHorizontalPaddingMinus: calc((50vw - 480px) * -1);
+$sectionHorizontalPaddingMinus: calc((50vw - 630px) * -1);
+
+$mainFont: 'Raleway';
+$secondFont: 'OldStandardTT';

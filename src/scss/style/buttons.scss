@@ -1,0 +1,51 @@
+
+@import '../assets/colors';
+@import '../assets/mixins';
+@import '../assets/variables';
+
+.btn {
+  display: block;
+  text-align: center;
+  padding: 12px 35px;
+  font: 400 16px/1 $mainFont;
+  width: 100%;
+  border: 1px solid transparent;
+  transition: color .25s, background .25s, border .25s, opacity .25s !important;
+}
+
+.btn_red {
+  color: $white;
+  background-color: $red;
+  border-color: $red;
+}
+
+.btn_hover-red {
+  &:hover {
+    color: $red;
+    background-color: transparent;
+    border-color: $red;
+  }
+}
+
+.btn_hover-white {
+  &:hover {
+    color: $white;
+    background-color: transparent;
+    border-color: $white;
+  }
+}
+
+.btn_hover-gold {
+  &:hover {
+    color: $black;
+    background-color: transparent;
+    border-color: #E5D2A5;
+  }
+}
+
+@media screen and (min-width: 767.98px) {
+  .btn {
+    padding: 12px 30px;
+    max-width: max-content;
+  }
+}

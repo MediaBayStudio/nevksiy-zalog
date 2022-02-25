@@ -1,0 +1,21 @@
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.partners {
+  &__slider {
+    .slick-track {
+      padding-left: 20px;
+    }
+
+    .slick-dots {
+      left: 0;
+    }
+  }
+
+  &__slide {
+    object-fit: contain;
+    margin-right: 40px;
+    max-width: 130px;
+  }
+}
